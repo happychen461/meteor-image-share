@@ -1,0 +1,28 @@
+/* CSS declarations go here */
+.thumbnail{
+  height: 250px;
+  max-height: 250px;
+  padding:0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:0px;
+}
+
+.css-img-container{
+  height: 200px;
+  width: 100%
+}
+
+.css-image{
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.css-image-element{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.css-des-container{
+  padding:5px;
+}

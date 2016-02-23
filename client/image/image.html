@@ -1,0 +1,22 @@
+<template name="image">
+  <div class="col-xs-12 col-md-3 css-image-element" id="{{_id}}">
+    <div class="thumbnail">
+      <div class="css-image-container">
+        <img class="css-image" src="{{image_src}}" alt="{{iamge_alt}}" />
+      </div>
+      <div class="css-des-container">
+        <p>Description: {{image_alt}}<br>
+          <!-- here author is one field in the collcetion of imagesDb
+          we use this as an arugment of helper getAuthor -->
+          Created by: <a href="#" class="js-filter-img-by-user">{{getAuthor author}}</a>
+        </p>
+
+      </div>
+    </div>
+    <div class="caption">
+      <h3>Rating: {{rating}}</h3>
+      <p>{{> starsRating mutable=true rating=rating class="js-star-rate" id=_id}}</p>
+      <button class="js-del-btn btn btn-warning">delete</button>
+    </div>
+  </div>
+</template>
