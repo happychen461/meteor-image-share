@@ -16,7 +16,9 @@
     <div class="caption">
       <h3>Rating: {{rating}}</h3>
       <p>{{> starsRating mutable=true rating=rating class="js-star-rate" id=_id}}</p>
-      <button class="js-del-btn btn btn-warning">delete</button>
+      {{#if removable currentUser}}
+        <button class="js-del-btn btn btn-warning">delete</button>
+      {{/if}}
     </div>
   </div>
 </template>

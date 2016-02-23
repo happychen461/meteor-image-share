@@ -10,7 +10,16 @@ Template.image.helpers({
     }else{
       return "anounmos"
     }
-  }
+  },
+
+  /* only user allow to remove the pic*/
+  removable:function(){
+    if(this.author == Meteor.userId()){
+      return true;
+    }else{
+      return false;
+    }
+  },
 });
 
 Template.image.events({
