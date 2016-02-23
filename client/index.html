@@ -3,15 +3,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      {{> loginButtons}}
-    </div>
-  </nav>
 
-  <div class="container">
-    <h1>Welcome to My Photos {{> user}}!</h1>
-
-    {{> images}}
-  </div>
 </body>
+
+<!-- This is global template which contains two parts. Those parts will
+be rendered with different content later -->
+<template name="ApplicationLayout">
+  {{> yield 'navbar'}}
+  {{> yield 'main'}}
+</template>

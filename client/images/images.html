@@ -1,17 +1,18 @@
 <template name="images">
   <!-- currentUser is a meteor built-in variable to detect if it is current
    user or not -->
-  {{#if currentUser}}
-    <div class="css-add-image">
-      {{> addImage}}
-    </div>
-  {{/if}}
-  <div class="row">
-    {{#if img_is_filered}}
-      <p><a href="#" class="js-rm-filter">Showe all users</a></p>
+  <div class="container">
+  
+    {{#if currentUser}}
+      <div class="css-add-image">
+        {{> addImage}}
+      </div>
     {{/if}}
-    {{#each imgs}}
-      {{> image}}
-    {{/each}}
+
+    <div class="row">
+      {{#if img_is_filered}}
+      <p><a href="#" class="js-rm-filter">Showe all users</a></p>
+      {{/if}} {{#each imgs}} {{> image}} {{/each}}
+    </div>
   </div>
 </template>
